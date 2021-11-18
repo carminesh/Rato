@@ -2,10 +2,10 @@
 
       <div class="exchange-container">
         
-        <form class="form-container" @click.prevent>
+        <form class="form-container">
           <div class="amount-container">
             <h2>Amount</h2>
-            <input type="number" placeholder="1.00" required>
+            <input type="number" placeholder="1.00" v-model="amount" required>
           </div>
           <div class="fromCurrency-container">
             <h2>From Currency</h2>
@@ -126,9 +126,8 @@
             <h2 id="swap-text">Swap</h2>
             <button class="swap-btn"><i class="fas fa-exchange-alt"></i></button>
           </div>
-           <button class="btn-convert">Convert</button>
+           <button type="submit" class="btn-convert" @click.prevent="convertCurrency">Convert</button>
         </form>
-
 
         <div class="result-container">
           <div class="result">
@@ -136,9 +135,9 @@
                 <div class="result-text">
                   <div class="text">
                     <h3>
-                      <span id="from-value">USD</span>
+                      <span id="from-value">{{amount}}{{fromCurrency}}</span>
                       <span id="equal">=</span>
-                      <span id="to-value">EUR</span>
+                      <span id="to-value">{{result}}{{toCurrency}}</span>
                     </h3>
                   </div>
                 </div>
@@ -152,14 +151,40 @@
 
 <script>
 
+import axios from "axios";
+
 export default {
   name: 'FormContainer',
   
   data() {
     return {
-      fromCurrency : 'USD',
-      toCurrency : 'EUR'
+      amount: '1',
+      fromCurrency : 'EUR',
+      toCurrency : 'USD',
+      result: '0'
     }
+  },
+  methods: {
+    
+
+    async convertCurrency() {
+
+      try {
+        const res = await axios.get(`https://api.exchangerate.host/convert?from=${this.fromCurrency}&to=${this.toCurrency}&amount=${this.amount}`);
+
+        this.result = parseInt(res.data.result).toFixed(2);
+
+      }catch(e) {
+        console.error(e);
+      }
+
+    },
+
+    mounted() {
+    this.convertCurrency();
+    },
+
+
   }
 
 }
@@ -265,8 +290,7 @@ export default {
 
 
   .result-text {
-    margin-top: 5px;
-    width: 250px;
+    width: 300px;
     padding: 0.7rem 4.4rem;
     border: solid 2px #2F2E32;
     border-radius: 5px;
