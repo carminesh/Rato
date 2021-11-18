@@ -124,7 +124,7 @@
           </div>
            <div class="swap-container">
             <h2 id="swap-text">Swap</h2>
-            <button class="swap-btn"><i class="fas fa-exchange-alt"></i></button>
+            <button class="swap-btn" @click.prevent="swapCurrency"><i class="fas fa-exchange-alt"></i></button>
           </div>
            <button type="submit" class="btn-convert" @click.prevent="convertCurrency">Convert</button>
         </form>
@@ -157,34 +157,37 @@ export default {
       amount: '1',
       fromCurrency : 'EUR',
       toCurrency : 'USD',
-      result: '0'
+      result: '1',
+      date: ''
     }
   },
   methods: {
     
 
+    //Fetch data from the API
     async convertCurrency() {
 
       try {
         const res = await axios.get(`https://api.exchangerate.host/convert?from=${this.fromCurrency}&to=${this.toCurrency}&amount=${this.amount}`);
-
+        this.date = res.data.date;
         this.result = parseInt(res.data.result).toFixed(2);
-
       }catch(e) {
         console.error(e);
       }
 
     },
 
-    mounted() {
-    this.convertCurrency();
-    },
 
+    //Function that enable the currency swap
+    swapCurrency() {
+      const currency = this.fromCurrency;
+      this.fromCurrency = this.toCurrency;
+      this.toCurrency = currency;
+    }
 
   }
 
 }
-
 
 </script>
 
@@ -241,7 +244,7 @@ export default {
     border: solid 3px #3872FF;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
   }
 
   .swap-btn:hover {

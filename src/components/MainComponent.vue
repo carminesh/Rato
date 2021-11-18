@@ -13,7 +13,7 @@
     </div>
 
     <div class="second-section">
-      <h1 id="exchange-text">Convert your value - 18th November</h1>
+      <h1 id="exchange-text">Convert your value - {{date}}</h1>
       <FormContainer></FormContainer>
     </div>
   </div>
@@ -27,7 +27,22 @@ export default {
   name: 'MainComponent',
   components: {
     FormContainer
+  },
+  
+  computed: {
+
+    //Calculate the exact date 
+    date() {
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      const today = new Date();
+      let domEnder = new Array( 'th', 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th' );
+      let dayOfMonth = (today.getDate() < 10) ? '0' + today.getDate() + domEnder[today.getDate()] : today.getDate() + domEnder[parseFloat(("" + today.getDate()).substr(("" + today.getDate()).length - 1))];
+      return `${dayOfMonth} ${months[today.getMonth()]} ${today.getFullYear()}`;
+    }
+    
   }
+
+
 }
 </script>
 
