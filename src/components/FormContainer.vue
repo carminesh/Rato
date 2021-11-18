@@ -133,13 +133,9 @@
           <div class="result">
               <h2>Converted value</h2>
                 <div class="result-text">
-                  <div class="text">
-                    <h3>
-                      <span id="from-value">{{amount}}{{fromCurrency}}</span>
-                      <span id="equal">=</span>
-                      <span id="to-value">{{result}}{{toCurrency}}</span>
-                    </h3>
-                  </div>
+                  <span id="from-value">{{amount}} {{fromCurrency}}</span>
+                  <span id="equal">=</span>
+                  <span id="to-value">{{result}} {{toCurrency}}</span>
                 </div>
           </div>
         </div>
@@ -288,13 +284,13 @@ export default {
     width: 80%;
   }
 
-
   .result-text {
-    width: 300px;
-    padding: 0.7rem 4.4rem;
-    border: solid 2px #2F2E32;
-    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#3872FF;
   }
+
+
 
   #equal {
     margin: 0 10px;
