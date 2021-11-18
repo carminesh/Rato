@@ -290,8 +290,6 @@ export default {
     color:#3872FF;
   }
 
-
-
   #equal {
     margin: 0 10px;
   }
