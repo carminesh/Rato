@@ -3,10 +3,12 @@
     <a href="#"><img id="logo" src="../assets/logo.svg" alt="logo"></a>
     <div class="base-currency">
       <h3>Base Currency</h3>
-      <div class="currency">
-        <h3>USD</h3>
-        <img id="base-currency-img" src="../assets/usdIcon.svg" alt="value image">
-      </div>
+
+      <select v-model="defaultValue" name="base-currency-selector" id="currency-selector" @input="$emit('base-currency-input', $event.target.value)" :value="value">
+        <option v-for="(option, index) in options" :key="index" :value="option">{{option}}</option>
+      </select>
+
+
     </div>
   </div>
   
@@ -16,7 +18,14 @@
 
 export default {
   name: 'NavComponent',
-  
+
+  data() {
+    return {
+      defaultValue : 'EUR',
+      options: ['EUR', 'USD']
+    }
+  }
+
 }
 </script>
 
@@ -46,25 +55,16 @@ export default {
     justify-content: space-between;
   }
 
-  .currency {
-    display: flex;
-    align-items: center;
+  #currency-selector {
     background-color: #ffff;
     margin-left: 20px;
-    width: 100px;
+    width: 90px;
     height: 45px;
     border-radius: 5px;
     color: #2F2E32;
+    font-size: 1.2rem;
+    font-weight: 500;
   }
 
-  .currency h3 {
-    margin-left: 5px;
-  }
-
-  #base-currency-img {
-    margin-left: 5px;
-    width: 40%;
-    object-fit: cover;
-  }
 
 </style>

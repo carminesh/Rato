@@ -1,7 +1,7 @@
 <template>
 
-  <NavComponent></NavComponent>
-  <MainComponent></MainComponent>
+  <NavComponent @base-currency-input="baseCurrency"></NavComponent>
+  <MainComponent :currency="currency"></MainComponent>
   <FooterComponent></FooterComponent>
 
 </template>
@@ -17,6 +17,21 @@ export default {
     NavComponent,
     MainComponent,
     FooterComponent
+  },
+
+  data() {
+    return {
+      currency: ''
+    }
+  },
+
+  methods: {
+
+    //Set the baseCurrency received from the NavComponent
+    baseCurrency(target) {
+      this.currency = target;
+    }
+
   }
 }
 </script>

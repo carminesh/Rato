@@ -1,6 +1,8 @@
 <template>
 
       <div class="exchange-container">
+
+        <button class="refresh-btn" @click="updateCurrency"><i class="fas fa-sync-alt"></i></button>
         
         <form class="form-container">
           <div class="amount-container">
@@ -139,7 +141,6 @@
                 </div>
           </div>
         </div>
-      
 
       </div>
   
@@ -151,6 +152,13 @@ import axios from "axios";
 
 export default {
   name: 'FormContainer',
+
+  props: {
+     currency: {
+          type: String,
+          required: true
+      }
+  },
   
   data() {
     return {
@@ -163,6 +171,15 @@ export default {
   },
   methods: {
     
+    //Update all currency input based on the current chosen currency
+    updateCurrency() {
+      this.fromCurrency = this.currency;
+      if(this.fromCurrency == 'EUR') { 
+        this.toCurrency = 'USD';
+      } else {
+        this.toCurrency = 'EUR'
+      }
+    },
 
     //Fetch data from the API
     async convertCurrency() {
@@ -177,7 +194,6 @@ export default {
 
     },
 
-
     //Function that enable the currency swap
     swapCurrency() {
       const currency = this.fromCurrency;
@@ -185,7 +201,7 @@ export default {
       this.toCurrency = currency;
     }
 
-  }
+  },
 
 }
 
@@ -248,10 +264,10 @@ export default {
   }
 
   .swap-btn:hover {
-    border: solid 3px #2F2E32;
+    border: solid 3px #244cb3;
   }
   .swap-btn:hover i{
-    color: #2F2E32;
+    color: #244cb3;
   }
 
   i {
@@ -266,7 +282,7 @@ export default {
     font-weight: bold;
     font-size: 1.1rem;
     background-color: #3872FF;
-    border: solid 3px #3872FF;
+    border: none;
     border-radius: 5px;
     height: 48px;
     padding: 0rem 1.5rem;
@@ -275,9 +291,8 @@ export default {
   }
 
   .btn-convert:hover {
-    background: none;
-    border: solid 3px #3872FF; 
-    color: #3872FF;
+    background: #244cb3;
+    color: white;
   }
 
   .result-container {
@@ -295,6 +310,22 @@ export default {
 
   #equal {
     margin: 0 10px;
+  }
+
+  .refresh-btn i {
+    font-size: 1.5rem;
+    pointer-events: none;
+    color: #3872FF;
+  }
+
+  .refresh-btn {
+    padding: 0.7rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    right: 6.5%;
+    top: 46px;
   }
   
 </style>

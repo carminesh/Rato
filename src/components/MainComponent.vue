@@ -14,7 +14,7 @@
 
     <div class="second-section">
       <h1 id="exchange-text">Convert your value - {{date}}</h1>
-      <FormContainer></FormContainer>
+      <FormContainer :currency="currency"></FormContainer>
     </div>
   </div>
   
@@ -27,6 +27,13 @@ export default {
   name: 'MainComponent',
   components: {
     FormContainer
+  },
+
+  props: {
+    currency: {
+      type: String,
+      required: true
+    }
   },
   
   computed: {
