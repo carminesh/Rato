@@ -1,6 +1,7 @@
 <template>
 
       <div class="exchange-container">
+        
         <form class="form-container" @click.prevent>
           <div class="amount-container">
             <h2>Amount</h2>
@@ -128,18 +129,23 @@
            <button class="btn-convert">Convert</button>
         </form>
 
+
         <div class="result-container">
-          <h2>Converted value</h2>
           <div class="result">
-            <div class="text">
-              <h3>
-                <span id="from-value">USD</span>
-                <span id="equal">=</span>
-                <span id="to-value">EUR</span>
-              </h3>
-            </div>
+              <h2>Converted value</h2>
+                <div class="result-text">
+                  <div class="text">
+                    <h3>
+                      <span id="from-value">USD</span>
+                      <span id="equal">=</span>
+                      <span id="to-value">EUR</span>
+                    </h3>
+                  </div>
+                </div>
           </div>
         </div>
+      
+
       </div>
   
 </template>
@@ -159,8 +165,6 @@ export default {
 }
 
 
-
-
 </script>
 
 <style scoped>
@@ -169,19 +173,19 @@ export default {
     margin-top: 20px;
     background-color: #ffffff;
     width: 100%;
-    height: 70%;
+    height: 75%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .form-container {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .amount-container input {
@@ -253,15 +257,14 @@ export default {
   }
 
   .result-container {
-    align-self: flex-start;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 81%;
-    margin: 20px auto;
+    width: 80%;
   }
 
-  .result {
+
+  .result-text {
     margin-top: 5px;
     width: 250px;
     padding: 0.7rem 4.4rem;

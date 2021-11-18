@@ -7,7 +7,7 @@
         Start to exchange your value right now
         </h1>
         <p>To get started enter the values below and calculate today’s exchange rates</p>
-        <a id="exchange-redirect" href="#">Exchange now</a>
+        <a id="exchange-redirect" href="">Exchange now</a>
       </div>
       <img src="../assets/hero.svg" alt="hero image">
     </div>
@@ -65,7 +65,7 @@ export default {
 
   .first-section img {
     margin: auto;
-    height: 95%;
+    height: 98%;
     object-fit: cover;
   }
 
