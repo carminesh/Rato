@@ -50,6 +50,7 @@ export default {
   }
 
   .base-currency {
+    margin-right: 4vw;
     display: flex;
     align-items: center;
     justify-content: space-between;

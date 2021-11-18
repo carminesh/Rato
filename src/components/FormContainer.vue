@@ -324,7 +324,7 @@ export default {
     background: none;
     cursor: pointer;
     position: absolute;
-    right: 6.5%;
+    right: 9.5vw;
     top: 46px;
   }
   
