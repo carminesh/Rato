@@ -88,13 +88,14 @@ export default {
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
-    height: 40%;
+    height: 35%;
   }
 
   #exchange-text {
     font-size:  2.6rem;
     color: white;
   }
+
 
 
 </style>
