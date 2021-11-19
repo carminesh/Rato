@@ -183,17 +183,14 @@ export default {
       color: white;
     }
 
+
   }
 
    /*iPads, Tablets devices*/
   @media screen and (min-width: 481px) and (max-width: 768px) {
 
     .first-section {
-      margin-top: 50px;
-      width: 100%;
       height: 48%;
-      flex-direction: column;
-      align-items: flex-start;
       background-image: url(../assets/hero.svg);
       background-repeat: no-repeat;
       background-position: 0px 40px;
@@ -219,8 +216,50 @@ export default {
       width: 100%;
       height: 43%;
     }
-   
+
+    .redirect-btn {
+      font-size: 1.5rem;
+    }
     
   }
+
+  /*Small screens, laptops*/
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .first-section {
+      height: 53%;
+      background-image: url(../assets/hero.svg);
+      background-repeat: no-repeat;
+      background-position: 0px 50px;
+      background-size: 100%;
+      background-blend-mode: soft-light;
+    }
+
+    .text-container {
+      margin-top: 150px;
+      align-self: flex-start;
+      justify-content: center;
+      font-size: 1.5rem;
+      width: 90%;
+    }
+
+    .text-container p {
+      padding-top: 0.7rem;
+    }
+
+    .first-section img {
+      display: none;
+    }
+
+    .second-section {
+      height: 42%;
+    }
+
+    .redirect-btn {
+      font-size: 1.3rem;
+    }
+
+  }
+
 
 </style>

@@ -63,5 +63,18 @@ export default {
       }
   }
 
+  /*Small screens, laptops*/
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+     #footer {
+        position: absolute;
+        pointer-events: none;
+        bottom: -100vh;
+        left: 0;
+        object-fit: cover;
+        z-index: 1;
+        width: 100%;
+      }
+  }
+
 
 </style>

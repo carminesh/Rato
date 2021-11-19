@@ -468,9 +468,77 @@ export default {
       right: 6vw;
       top: 4vh;
     }
+
+  }
+
+   /*Small screens, laptops*/
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
     
+    .exchange-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
+    .form-container {
+      margin-top: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
+    .amount-container input {
+      margin-top: 5px;
+      width: 100%;
+    }
+
+    .fromCurrency-container, .toCurrency-container, .swap-container {
+      margin-top: 10px;
+    } 
+
+    .fromCurrency-container select {
+      width: 100%;
+    }
+
+    .toCurrency-container select {
+      width: 100%;
+    }
+
+    .swap-btn {
+      width: 100%;
+      padding: 0.7rem 0;
+    }
+
+    .btn-convert {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      width: 100%;
+    }
+
+    .result-container {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    .result-text {
+      font-size: 2.5rem;
+    }
+
+    .refresh-btn i {
+      font-size: 2rem;
+      pointer-events: none;
+      color: #3872FF;
+    }
+
+    .refresh-btn {
+      overflow: auto !important;
+      position: absolute;
+      right: 6vw;
+      top: 3.2vh;
+    }
+  
   }
   
 </style>

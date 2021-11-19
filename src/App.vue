@@ -73,8 +73,14 @@ export default {
     html {
       font-size: 80%;
     }
-   
     
+  }
+
+  /*Small screens, laptops*/
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    html {
+      font-size: 120%;
+    }
   }
 
 </style>
