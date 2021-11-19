@@ -213,7 +213,7 @@ export default {
     margin-top: 20px;
     background-color: #ffffff;
     width: 100%;
-    height: 75%;
+    height: 65%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -224,7 +224,6 @@ export default {
   .form-container {
     width: 80%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -326,6 +325,81 @@ export default {
     position: absolute;
     right: 9.5vw;
     top: 46px;
+  }
+
+  /* MEDIA QUERIES */
+
+  /*Mobile devices*/
+  @media screen and (max-width: 480px) {
+
+    .exchange-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .form-container {
+    margin-top: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .amount-container input {
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .fromCurrency-container select {
+    width: 100%;
+  }
+
+  .toCurrency-container select {
+    width: 100%;
+  }
+
+  .swap-btn {
+    width: 100%;
+    padding: 0.7rem 0;
+  }
+
+  .btn-convert {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .btn-convert:hover {
+    background: #244cb3;
+    color: white;
+  }
+
+  .result-container {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  .result-text {
+    font-size: 2.5rem;
+  }
+
+  .refresh-btn i {
+    font-size: 2rem;
+    pointer-events: none;
+    color: #3872FF;
+  }
+
+  .refresh-btn {
+    overflow: auto !important;
+    position: absolute;
+    right: 6vw;
+    top: 4.5vh;
+  }
+    
+
   }
   
 </style>

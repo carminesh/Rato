@@ -38,6 +38,10 @@ export default {
 
 <style>
 
+  html {
+    font-size: 100%;
+  }
+
   * {
     padding: 0;
     margin: 0;
@@ -51,4 +55,21 @@ export default {
     background-color: #2F2E32;
     height: 200vh;
   }
+
+
+  @media screen and (max-width: 480px) {
+
+    html {
+      font-size: 70%;
+    }
+
+    #app {
+      overflow-x: hidden;
+      height: 200vh;
+      width: 100%;
+    }
+
+
+  }
+
 </style>

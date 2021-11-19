@@ -1,15 +1,15 @@
 <template>
   <div class="nav-container">
     <a href="#"><img id="logo" src="../assets/logo.svg" alt="logo"></a>
+
     <div class="base-currency">
       <h3>Base Currency</h3>
 
       <select v-model="defaultValue" name="base-currency-selector" id="currency-selector" @input="$emit('base-currency-input', $event.target.value)" :value="value">
         <option v-for="(option, index) in options" :key="index" :value="option">{{option}}</option>
       </select>
-
-
     </div>
+
   </div>
   
 </template>
@@ -65,6 +65,36 @@ export default {
     color: #2F2E32;
     font-size: 1.2rem;
     font-weight: 500;
+  }
+
+  /* MEDIA QUERIES */
+
+  /*Mobile devices*/
+  @media screen and (max-width: 480px) {
+
+    .nav-container {
+      width: 90%;
+      height: 7%;
+    }
+
+    #logo {
+      width: 45px;
+      object-fit: cover;
+    }
+
+    .base-currency {
+      margin-right: 15vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .base-currency h3{
+      display: none;
+    }
+
+    
+
   }
 
 

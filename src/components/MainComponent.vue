@@ -7,7 +7,8 @@
         Start to exchange your value right now
         </h1>
         <p>To get started enter the values below and calculate today’s exchange rates</p>
-        <a id="exchange-redirect" href="">Exchange now</a>
+        <button class="redirect-btn" @click="location.href=FormContainer">Exchange now</button>
+        <!-- <a id="exchange-redirect" href="">Exchange now</a> -->
       </div>
       <img src="../assets/hero.svg" alt="hero image">
     </div>
@@ -85,23 +86,21 @@ export default {
     padding-top: 1rem;
   }
 
+   .redirect-btn {
+    background-color: #3872FF;
+    margin-top: 20px;
+    padding: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+  }
+
+
   .first-section img {
     margin: auto;
     height: 98%;
     object-fit: cover;
-  }
-
-  #exchange-redirect {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 20px;
-    background-color: #3872FF;
-    text-decoration: none;
-    color: white;
-    width: 32%;
-    padding: 0.8rem;
-    border-radius: 10px;
-    cursor: pointer;
   }
 
   .second-section {
@@ -118,6 +117,68 @@ export default {
     color: white;
   }
 
+  /* MEDIA QUERIES */
+
+  /*Mobile devices*/
+  @media screen and (max-width: 480px) {
+
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .first-section {
+    margin-top: 50px;
+    width: 100%;
+    height: 42%;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url(../assets/hero.svg);
+    background-repeat: no-repeat;
+    background-position: 50px 100px;
+    background-size: 110%;
+    background-blend-mode: soft-light;
+  }
+
+  .text-container {
+    margin-left: 5%;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 90%;
+  }
+
+  .text-container p {
+    padding-top: 0.7rem;
+  }
+
+  .redirect-btn {
+    background-color: #3872FF;
+    margin-top: 20px;
+    padding: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+  }
+
+  .first-section img {
+    display: none;
+  }
+
+  .second-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 90%;
+    height: 37%;
+  }
+
+  #exchange-text {
+    font-size:  3rem;
+    color: white;
+  }
+
+  }
 
 
 </style>
