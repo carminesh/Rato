@@ -16,6 +16,8 @@
 
 <script>
 
+import {gsap} from 'gsap'
+
 export default {
   name: 'NavComponent',
 
@@ -24,6 +26,10 @@ export default {
       defaultValue : 'EUR',
       options: ['EUR', 'USD']
     }
+  },
+
+  mounted: function() {
+    gsap.from('.nav-container', {y: -200, duration: 1, ease: 'Power1.easeOut'});
   }
 
 }

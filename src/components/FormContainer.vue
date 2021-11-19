@@ -148,7 +148,8 @@
 
 <script>
 
-import axios from "axios";
+import axios from "axios"
+import gsap from 'gsap'
 
 export default {
   name: 'FormContainer',
@@ -202,6 +203,10 @@ export default {
     }
 
   },
+
+  mounted: function() {
+    gsap.from('.refresh-btn', {y: -200, duration: 1, ease: 'Power1.easeOut'});
+  }
 
 }
 

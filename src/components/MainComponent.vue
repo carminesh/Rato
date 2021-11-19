@@ -21,6 +21,7 @@
 
 <script>
 import FormContainer from './FormContainer.vue'
+import {gsap} from 'gsap'
 
 export default {
   name: 'MainComponent',
@@ -33,7 +34,7 @@ export default {
       type: String,
       required: true
     }
-  },
+  }, 
   
   computed: {
 
@@ -46,8 +47,14 @@ export default {
       return `${dayOfMonth} ${months[today.getMonth()]} ${today.getFullYear()}`;
     }
     
-  }
+  },
 
+  mounted: function() {
+  
+    gsap.from('.first-section', {opacity: 0, duration: 2, ease: 'Power1.easeInOut'});
+    gsap.from('.text-container', {x:-1000, duration: 1, ease: 'Power1.easeOut'})
+
+  }
 
 }
 </script>
