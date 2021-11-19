@@ -72,10 +72,10 @@ export default {
     height: 60%;
     display: flex;
     align-items: center;
-    background-image: url(../assets/hero.svg);
+    background-image: url(../assets/hero2.png);
     background-repeat: no-repeat;
-    background-position: 25px -13px;
-    background-size: 130% 100%;
+    background-position: 30vw -10px;
+    background-size: contain;
     background-blend-mode: normal;
   }
 
@@ -139,11 +139,11 @@ export default {
       height: 42%;
       flex-direction: column;
       align-items: flex-start;
-      background-image: url(../assets/hero.svg);
+      background-image: url(../assets/hero2.png);
       background-repeat: no-repeat;
       background-position: 50px 100px;
       background-size: 110%;
-      background-blend-mode: soft-light;
+      background-blend-mode: overlay;
     }
 
     .text-container {
@@ -192,11 +192,11 @@ export default {
 
     .first-section {
       height: 48%;
-      background-image: url(../assets/hero.svg);
+      background-image: url(../assets/hero2.png);
       background-repeat: no-repeat;
       background-position: 0px 40px;
       background-size: 100%;
-      background-blend-mode: soft-light;
+      background-blend-mode: overlay;
     }
 
     .text-container {
@@ -229,11 +229,11 @@ export default {
 
     .first-section {
       height: 53%;
-      background-image: url(../assets/hero.svg);
+       background-image: url(../assets/hero2.png);
       background-repeat: no-repeat;
       background-position: 0px 50px;
       background-size: 100%;
-      background-blend-mode: soft-light;
+      background-blend-mode: overlay;
     }
 
     .text-container {
@@ -266,11 +266,11 @@ export default {
   @media screen and (min-width: 1025px) and (max-width:1400px) {
     .first-section {
       height: 53%;
-      background-image: url(../assets/hero.svg);
+      background-image: url(../assets/hero2.png);
       background-repeat: no-repeat;
       background-position: 8px 0px;
       background-size: 100% 100%;
-      background-blend-mode:overlay;
+      background-blend-mode: overlay;
     }
 
     .text-container {
@@ -295,6 +295,16 @@ export default {
 
     .redirect-btn {
       font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    .first-section {
+      background-image: url(../assets/hero2.png);
+      background-repeat: no-repeat;
+      background-position: 40vw -10px;
+      background-size: contain;
+      background-blend-mode: normal;
     }
   }
 
