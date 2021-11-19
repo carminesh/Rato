@@ -48,5 +48,20 @@ export default {
     }
 
   }
-  
+
+   /*iPads, Tablets devices*/
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+
+      #footer {
+        position: absolute;
+        pointer-events: none;
+        bottom: -100vh;
+        left: 0;
+        object-fit: cover;
+        z-index: 1;
+        width: 100%;
+      }
+  }
+
+
 </style>

@@ -54,6 +54,8 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     background-color: #2F2E32;
     height: 200vh;
+    width: 100%;
+    overflow-x: hidden;
   }
 
 
@@ -63,13 +65,16 @@ export default {
       font-size: 70%;
     }
 
-    #app {
-      overflow-x: hidden;
-      height: 200vh;
-      width: 100%;
+  }
+
+  /*iPads, Tablets devices*/
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+
+    html {
+      font-size: 80%;
     }
-
-
+   
+    
   }
 
 </style>

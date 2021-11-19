@@ -86,7 +86,7 @@ export default {
     padding-top: 1rem;
   }
 
-   .redirect-btn {
+  .redirect-btn {
     background-color: #3872FF;
     margin-top: 20px;
     padding: 1rem;
@@ -94,6 +94,11 @@ export default {
     border: none;
     border-radius: 5px;
     width: 50%;
+    cursor: pointer;
+  }
+
+  .redirect-btn:hover {
+    background-color: #1e48b3;
   }
 
 
@@ -122,63 +127,100 @@ export default {
   /*Mobile devices*/
   @media screen and (max-width: 480px) {
 
-  .main-container {
-    width: 100%;
-    height: 100%;
+    .main-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .first-section {
+      margin-top: 50px;
+      width: 100%;
+      height: 42%;
+      flex-direction: column;
+      align-items: flex-start;
+      background-image: url(../assets/hero.svg);
+      background-repeat: no-repeat;
+      background-position: 50px 100px;
+      background-size: 110%;
+      background-blend-mode: soft-light;
+    }
+
+    .text-container {
+      margin-left: 5%;
+      justify-content: center;
+      font-size: 1.5rem;
+      width: 90%;
+    }
+
+    .text-container p {
+      padding-top: 0.7rem;
+    }
+
+    .redirect-btn {
+      background-color: #3872FF;
+      margin-top: 20px;
+      padding: 1rem;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      width: 50%;
+    }
+
+    .first-section img {
+      display: none;
+    }
+
+    .second-section {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 90%;
+      height: 37%;
+    }
+
+    #exchange-text {
+      font-size:  3rem;
+      color: white;
+    }
+
   }
 
-  .first-section {
-    margin-top: 50px;
-    width: 100%;
-    height: 42%;
-    flex-direction: column;
-    align-items: flex-start;
-    background-image: url(../assets/hero.svg);
-    background-repeat: no-repeat;
-    background-position: 50px 100px;
-    background-size: 110%;
-    background-blend-mode: soft-light;
-  }
+   /*iPads, Tablets devices*/
+  @media screen and (min-width: 481px) and (max-width: 768px) {
 
-  .text-container {
-    margin-left: 5%;
-    justify-content: center;
-    font-size: 1.5rem;
-    width: 90%;
-  }
+    .first-section {
+      margin-top: 50px;
+      width: 100%;
+      height: 48%;
+      flex-direction: column;
+      align-items: flex-start;
+      background-image: url(../assets/hero.svg);
+      background-repeat: no-repeat;
+      background-position: 0px 40px;
+      background-size: 100%;
+      background-blend-mode: soft-light;
+    }
 
-  .text-container p {
-    padding-top: 0.7rem;
-  }
+    .text-container {
+      justify-content: center;
+      font-size: 1.8rem;
+      width: 90%;
+    }
 
-  .redirect-btn {
-    background-color: #3872FF;
-    margin-top: 20px;
-    padding: 1rem;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    width: 50%;
-  }
+     
+    .first-section img {
+      display: none;
+    }
 
-  .first-section img {
-    display: none;
+    .second-section {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+      height: 43%;
+    }
+   
+    
   }
-
-  .second-section {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 90%;
-    height: 37%;
-  }
-
-  #exchange-text {
-    font-size:  3rem;
-    color: white;
-  }
-
-  }
-
 
 </style>
