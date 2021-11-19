@@ -7,7 +7,7 @@
         Start to exchange your value right now
         </h1>
         <p>To get started enter the values below and calculate today’s exchange rates</p>
-        <button class="redirect-btn" @click="location.href=FormContainer">Exchange now</button>
+        <button class="redirect-btn"><a href="#exchange-text">Exchange now</a></button>
       </div>
     </div>
 
@@ -112,6 +112,13 @@ export default {
     transition: all 0.4s ease;
   }
 
+  .redirect-btn a{
+    color: white;
+    text-decoration: none;
+    padding: 1rem 5.8rem;
+    cursor: pointer;
+  }
+
   .redirect-btn:hover {
     background-color: #1e48b3;
   }
@@ -174,6 +181,10 @@ export default {
       width: 50%;
     }
 
+    .redirect-btn a{
+      padding: 1rem 3rem;
+    }
+
     .first-section img {
       display: none;
     }
@@ -229,6 +240,10 @@ export default {
       font-size: 1.5rem;
     }
     
+    .redirect-btn a{
+      padding: 1rem 4.5rem;
+    }
+    
   }
 
   /*Small screens, laptops*/
@@ -265,6 +280,10 @@ export default {
 
     .redirect-btn {
       font-size: 1.3rem;
+    }
+
+    .redirect-btn a{
+      padding: 1rem 4rem;
     }
 
   }
@@ -312,6 +331,10 @@ export default {
       background-position: 40vw -10px;
       background-size: contain;
       background-blend-mode: normal;
+    }
+    
+    .redirect-btn a{
+      padding: 1rem 8rem;
     }
   }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="nav-container">
-    <a href="#"><img id="logo" src="../assets/logo.svg" alt="logo"></a>
+    <a href="../public/index.html"><img id="logo" src="../assets/logo.svg" alt="logo"></a>
 
     <div class="base-currency">
       <h3>Base Currency</h3>
