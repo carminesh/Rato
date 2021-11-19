@@ -209,6 +209,7 @@ export default {
 
 <style scoped>
 
+
  .exchange-container {
     margin-top: 20px;
     background-color: #ffffff;
@@ -318,6 +319,7 @@ export default {
   }
 
   .refresh-btn {
+  
     padding: 0.7rem;
     border: none;
     background: none;
@@ -472,7 +474,7 @@ export default {
   }
 
    /*Small screens, laptops*/
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 769px) and (max-width: 1324px) {
     
     .exchange-container {
       width: 100%;
@@ -539,6 +541,29 @@ export default {
       top: 3.2vh;
     }
   
+  }
+
+  /*Large screen*/
+  @media screen and (min-width: 1320px) and (max-width: 1400px) {
+
+    .form-container {
+      width: 90%;
+    }
+
+    .result-container {
+      width: 90%;
+    }
+
+    .btn-convert {
+      height: 52%;
+    }
+    
+    .refresh-btn {
+      overflow: auto !important;
+      position: absolute;
+      right: 9vw;
+      top: 4.2vh;
+    }
   }
   
 </style>

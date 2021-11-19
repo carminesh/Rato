@@ -15,6 +15,7 @@ export default {
 
 <style scoped>
 
+
   #footer {
     pointer-events: none;
     bottom: 0;
@@ -34,13 +35,7 @@ export default {
   @media screen and (max-width: 480px) {
 
     #mobile-footer {
-      display: block;
-      pointer-events: none;
-      bottom: 10%;
-      left: 0;
-      object-fit: cover;
-      z-index: 1;
-      width: 120%;
+      display: none;
     }
 
     #footer {
@@ -64,11 +59,11 @@ export default {
   }
 
   /*Small screens, laptops*/
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 769px) and (max-width: 1324px)  {
      #footer {
         position: absolute;
         pointer-events: none;
-        bottom: -100vh;
+        bottom: -105vh;
         left: 0;
         object-fit: cover;
         z-index: 1;
@@ -76,5 +71,29 @@ export default {
       }
   }
 
+  /*Large screen*/
+  @media screen and (min-width: 1025px) and (max-width:1400px) {
+    #footer {
+        position: absolute;
+        pointer-events: none;
+        bottom: -105vh;
+        left: 0;
+        object-fit: cover;
+        z-index: 1;
+        width: 100%;
+      }
+  }
+  
+  @media screen and (min-width: 1401px) {
+    #footer {
+        position: absolute;
+        pointer-events: none;
+        bottom: -105vh;
+        left: 0;
+        object-fit: cover;
+        z-index: 1;
+        width: 100%;
+      }
+  }
 
 </style>

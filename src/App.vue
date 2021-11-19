@@ -49,6 +49,7 @@ export default {
   }
 
   #app {
+    overflow-y: hidden;
     font-family: 'Nunito', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -80,6 +81,13 @@ export default {
   @media screen and (min-width: 769px) and (max-width: 1024px) {
     html {
       font-size: 120%;
+    }
+  }
+
+  /*Large screen*/
+  @media screen and (min-width: 1025px) and (max-width: 1400px) {
+    html {
+      font-size: 140%;
     }
   }
 

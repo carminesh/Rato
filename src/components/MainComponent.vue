@@ -8,9 +8,7 @@
         </h1>
         <p>To get started enter the values below and calculate today’s exchange rates</p>
         <button class="redirect-btn" @click="location.href=FormContainer">Exchange now</button>
-        <!-- <a id="exchange-redirect" href="">Exchange now</a> -->
       </div>
-      <img src="../assets/hero.svg" alt="hero image">
     </div>
 
     <div class="second-section">
@@ -56,6 +54,7 @@ export default {
 
 <style scoped>
 
+
   .main-container {
     width: 80%;
     height: 80%;
@@ -63,23 +62,30 @@ export default {
     display:flex;
     flex-direction: column;
     align-items: center;
+
   }
 
   .first-section {
     background-color: #2F2E32;
     color: white;
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     align-items: center;
+    background-image: url(../assets/hero.svg);
+    background-repeat: no-repeat;
+    background-position: 25px -13px;
+    background-size: 130% 100%;
+    background-blend-mode: normal;
   }
 
   .text-container {
+    margin-bottom: 90px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: 1.6rem;
-    width: 50%;
+    width: 60%;
   }
 
   .text-container p {
@@ -87,6 +93,7 @@ export default {
   }
 
   .redirect-btn {
+    font-size: 1.3rem;
     background-color: #3872FF;
     margin-top: 20px;
     padding: 1rem;
@@ -95,17 +102,11 @@ export default {
     border-radius: 5px;
     width: 50%;
     cursor: pointer;
+    transition: all 0.4s ease;
   }
 
   .redirect-btn:hover {
     background-color: #1e48b3;
-  }
-
-
-  .first-section img {
-    margin: auto;
-    height: 98%;
-    object-fit: cover;
   }
 
   .second-section {
@@ -261,5 +262,40 @@ export default {
 
   }
 
+  /*Large screen*/
+  @media screen and (min-width: 1025px) and (max-width:1400px) {
+    .first-section {
+      height: 53%;
+      background-image: url(../assets/hero.svg);
+      background-repeat: no-repeat;
+      background-position: 8px 0px;
+      background-size: 100% 100%;
+      background-blend-mode:overlay;
+    }
+
+    .text-container {
+      margin-top: 150px;
+      align-self: flex-start;
+      justify-content: center;
+      font-size: 1.5rem;
+      width: 90%;
+    }
+
+    .text-container p {
+      padding-top: 0.7rem;
+    }
+
+    .first-section img {
+      display: none;
+    }
+
+    .second-section {
+      height: 42%;
+    }
+
+    .redirect-btn {
+      font-size: 1.3rem;
+    }
+  }
 
 </style>
