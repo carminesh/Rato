@@ -4,9 +4,9 @@
     <div class="first-section">
       <div class="text-container">
         <h1>
-        Start to exchange your value right now
+        Start to exchange your money value right now
         </h1>
-        <p>To get started enter the values below and calculate today’s exchange rates</p>
+        <p>To get started enter the values below and find out the value by today's exchange rates</p>
         <button class="redirect-btn"><a href="#exchange-text">Exchange now</a></button>
       </div>
     </div>
