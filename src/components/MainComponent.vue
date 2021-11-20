@@ -150,7 +150,7 @@ export default {
     .first-section {
       margin-top: 50px;
       width: 100%;
-      height: 42%;
+      height: 31%;
       flex-direction: column;
       align-items: flex-start;
       background-image: url(../assets/hero2.png);
@@ -182,7 +182,7 @@ export default {
     }
 
     .redirect-btn a{
-      padding: 1rem 3rem;
+      padding: 1rem 1rem;
     }
 
     .first-section img {
@@ -194,7 +194,7 @@ export default {
       align-items: flex-start;
       flex-direction: column;
       width: 90%;
-      height: 37%;
+      height: 30%;
     }
 
     #exchange-text {

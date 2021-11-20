@@ -402,7 +402,7 @@ export default {
       overflow: auto !important;
       position: absolute;
       right: 6vw;
-      top: 4.5vh;
+      top: 6.5vh;
     }
     
 

@@ -59,11 +59,17 @@ export default {
     overflow-x: hidden;
   }
 
+  /* MEDIA QUERIES */
 
+  /*Mobile devices*/
   @media screen and (max-width: 480px) {
 
     html {
       font-size: 70%;
+    }
+
+    #app {
+      height: 270vh;
     }
 
   }

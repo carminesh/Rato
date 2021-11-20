@@ -1,6 +1,5 @@
 <template>
 
-
   <div class="footer-container">
     <div class="footer">
         <h3>@Carmine Fabbri 2021 - 2022</h3>
@@ -69,6 +68,7 @@ export default {
   @media screen and (max-width: 480px) {
 
     .footer-container {
+      bottom: -170vh;
       height: 10%;
       max-height: 10%;
     }
