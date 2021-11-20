@@ -133,11 +133,12 @@
 
         <div class="result-container">
           <div class="result">
-              <h2>Converted value</h2>
+              <h2 v-if="this.result != 0">Converted value</h2>
                 <div class="result-text">
-                  <span id="from-value">{{amount}} {{fromCurrency}}</span>
+                  {{exchangedValue}}
+                  <!-- <span id="from-value">{{amount}} {{fromCurrency}}</span>
                   <span id="equal">=</span>
-                  <span id="to-value">{{result}} {{toCurrency}}</span>
+                  <span id="to-value">{{result}} {{toCurrency}}</span> -->
                 </div>
           </div>
         </div>
@@ -166,7 +167,7 @@ export default {
       amount: '1',
       fromCurrency : 'EUR',
       toCurrency : 'USD',
-      result: '1',
+      result: '0',
       date: ''
     }
   },
@@ -202,6 +203,16 @@ export default {
       this.toCurrency = currency;
     }
 
+  },
+
+  computed: {
+    exchangedValue() {
+      if(this.result == 0) {
+        return ``;
+      } else { 
+        return `${this.amount} ${this.fromCurrency} = ${this.result} ${this.toCurrency}`;
+      }
+    }
   },
 
   mounted: function() {
